@@ -27,3 +27,4 @@ deploy:
     - echo "Déploiement réussi !"
   only:
     - main
+
