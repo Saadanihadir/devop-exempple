@@ -24,7 +24,7 @@ jobs:
 
       # Étape pour construire l'image Docker
       - name: Build Docker image
-        run: docker build -t my-app -f Dockerfile .
+        run: docker build -t my-app -f devops-exempple/Dockerfile .
 
 
   # Étape 2 : Test
