@@ -24,7 +24,7 @@ jobs:
 
       # Étape pour construire l'image Docker
       - name: Build Docker image
-        run: docker build -t my-app -f /home/ubuntu/Downloads/node-js-getting-started-main/Dockerfile .
+        run: docker build -t my-app -f Dockerfile .
 
   # Étape 2 : Test
   test:
