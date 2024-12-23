@@ -1,0 +1,29 @@
+stages:
+  - build
+  - test
+  - deploy
+
+# Étape Build
+build:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build -t mon-app .
+
+# Étape Test
+test:
+  stage: test
+  image: node:14
+  script:
+    - npm install
+    - npm test
+
+# Étape Deploy
+deploy:
+  stage: deploy
+  script:
+    - echo "Déploiement réussi !"
+  only:
+    - main
